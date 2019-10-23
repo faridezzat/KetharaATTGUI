@@ -89,7 +89,7 @@ namespace KetharaATTGUI
 
             foreach (var log in data)
             {
-                if (uploadRecord(log.USERID, log.CHECKTIME, Convert.ToInt32(log.CHECKTYPE), Convert.ToInt32(log.SENSORID)))
+                if (uploadRecord(log.USERID, log.CHECKTIME, Convert.ToInt32(log.CHECKTYPE), Properties.Settings.Default.branch))
                 {
                     appendText(log.USERID + " uploaded ");
                     log.isDone = true;
